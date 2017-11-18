@@ -1,0 +1,29 @@
+<!--This appends the side menu access at the top -->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{mapTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <p>Welcome to Map Page!</p>
+
+<!--collapse-able button, situated at bottom right -->
+<ion-fab bottom right >
+  <button ion-fab><ion-icon name="add"></ion-icon></button>
+  <ion-fab-list side="top">
+    <!--Toggle between Floor level plans: these items show up on the top side-->
+    <!--If need be, set up to be columnized? or a swipe list?-->
+    <button ion-fab>1</button>
+    <button ion-fab>2</button>
+    <button ion-fab>3</button>
+  </ion-fab-list>
+  <ion-fab-list side="left">
+    <!--Directions Button: shows up on the left-->
+    <button ion-fab (click)="openDirectionModal()"><ion-icon name="list"></ion-icon></button>
+  </ion-fab-list>
+</ion-fab>

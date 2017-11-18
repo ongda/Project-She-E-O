@@ -1,0 +1,44 @@
+<!--This appends the side menu access at the top -->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!--Title at top bar -->
+    <ion-title>Search Page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--Sample text for now to help users -->
+  <p padding>NOTE: It is not necessary to input a room #</p>
+
+
+  <!--Starting Destination:-->
+<ion-item padding-top>From:</ion-item>
+  <!--Button to open up searchable list: SELECT-->
+    <button ion-button (click)="openBuildingsModalS()"  clear=true class=wrap-text>{{buildNameS}}</button>
+  <!--Button to enter room # ... will need to define a default in S2: CLEAR INPUT -->
+    <ion-item>
+      <ion-input type="roomNum" placeholder="Enter starting room # (optional)" clearInput="true"></ion-input>
+    </ion-item>
+
+
+<!--Destination-->
+<ion-item padding-top>To:</ion-item>
+<!--Button to open up searchable list: SELECT-->
+  <button ion-button (click)="openBuildingsModalF()"  clear=true class=wrap-text>{{buildNameF}}</button>
+  <!--Button to enter room # ... will need to define a default in S2: CLEAR INPUT -->
+  <ion-item>
+    <ion-input type="roomNum" placeholder="Enter starting room # (optional)"></ion-input>
+  </ion-item>
+
+  <!--Search Page leads to Map Page-->
+  <!--Button for navigating from Search Page to Map Page-->
+  <ion-row right>
+  <ion-col text-right>
+    <button ion-button (click)="goToMapPage();">Go To Map Page</button>
+ </ion-col>
+ </ion-row>
+
+</ion-content>

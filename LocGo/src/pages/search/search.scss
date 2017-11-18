@@ -1,0 +1,14 @@
+page-search {
+  //right now all this does it make the "go to map page" button have absolute position
+  .search-button{
+    position: absolute;
+  }
+  .full-width-select {
+    width: 100%;
+    max-width: 100%;
+  }
+  .wrap-text {
+    white-space:normal;
+    text-transform: none;
+  }
+}
